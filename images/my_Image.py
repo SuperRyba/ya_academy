@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw
 
-
+#test commit from nout
 class Drawer:
     def __init__(self, draw_map, cell_size):
         self.m = []
