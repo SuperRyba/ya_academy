@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw
 
 #test commit from nout
+#new
 class Drawer:
     def __init__(self, draw_map, cell_size):
         self.m = []
@@ -11,10 +12,11 @@ class Drawer:
         self.cell_size = cell_size
 
     def numbers(self):
-        itog = sorted(list(set(self.m)))
-        if isinstance(itog, tuple):
-            return reversed(itog)
-        return sorted(list(set(self.m)))
+        itog = []
+        for i in self.m:
+            if i not in itog:
+                itog += [i]
+        return sorted(reversed(itog))
 
     def set_color(self, number, color):
         for i in range(len(self.mapd)):
